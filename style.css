@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500; /* Semi-Bold */
+  
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Open Sans", sans-serif;
+}
+.slide{
+  font-style: italic;
+}
+.text-xs{
+  font-size: italic;
+  font-weight: 500;
+}
+/* popup update styling */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000000000;
+}
+.popup-content {
+  margin: 5dvb auto;
+  max-width: 500px;
+  position: relative;
+
+  /* width: 50%;
+  height: 50%; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  background-color: #ffffff;
+  padding: 10px;
+  padding-bottom: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+.close-btn {
+  background-color: #e80000;
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 5px 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 10px;
+  cursor: pointer;
+  z-index: 30;
+}
+.popup-content img {
+  width: 90%;
+}
+.popup-content p {
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: white; /* Change background color */
+}
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: black !important; /* Change text color */
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700; /* Semi-Bold */
+}
+.navbar-brand {
+  margin-right: 50px;
+}
+.navbar-brand img {
+  width: 50%;
+}
+.navbar-nav {
+  flex-grow: 1;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.navbar-toggler {
+  order: -1;
+  color: black;
+}
+.tog-icon button {
+  color: white;
+  z-index: 5;
+  background-color: gray;
+}
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+.navbar-nav-buttons {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  border-radius: 20px;
+}
+.navbar-nav-buttons .btn {
+  margin-top: 18px;
+}
+.btn-success {
+  border-radius: 80px;
+}
+.btn-danger {
+  border-radius: 80px;
+}
+.dropdown-menu-member {
+  display: none;
+  position: absolute;
+  background-color: green;
+  color: white;
+}
+.dropdown-menu-elect {
+  display: none;
+  position: absolute;
+  background-color: green;
+  color: white;
+}
+.dropdown-menu-event {
+  display: none;
+  position: absolute;
+  background-color: green;
+  color: white;
+}
+.dropdown-menu-about {
+  display: none;
+  position: absolute;
+  background-color: green;
+  color: white;
+}
+.dropdown-menu-elect a {
+  color: white;
+}
+.dropdown-menu-member a {
+  color: white;
+}
+.dropdown-menu-event a {
+  color: white;
+}
+.dropdown-menu-about a {
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: rgba(128, 128, 128, 0.29);
+  color: green;
+}
+
+.dropdown-member:hover .dropdown-menu-member {
+  display: block;
+}
+.dropdown-elect:hover .dropdown-menu-elect {
+  display: block;
+}
+.dropdown-event:hover .dropdown-menu-event {
+  display: block;
+}
+.dropdown-about:hover .dropdown-menu-about {
+  display: block;
+}
+/* slider styling below */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  min-width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: auto;
+}
+.slide-title {
+  position: absolute;
+  width: 40%;
+  bottom: 60px;
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Footer design here */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  padding: 5px 20px;
+  background-color: #222;
+  color: white;
+  padding: 30px 0px 0px 10px;
+}
+
+.footer-one {
+  margin-left: 10px;
+}
+
+.footer-one p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin: 0px auto;
+}
+
+.footer-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.col {
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.col a {
+  color: white;
+  display: block;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.footer-brand h4 {
+  font-family: 'roboto';
+  font-size: 22px;
+  font-weight: 700;
+  margin: auto 10px;
+  color: red;
+}
+
+.footer-social-icons {
+  display: flex;
+  font-size: 20px;
+  margin: 30px 0px;
+  gap: 10px;
+}
+
+.footer-social-icons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+select {
+  font-size: 12px;
+  padding-right: 80px;
+  margin: 20px 0px;
+}
+
+.footer-two .col h6 {
+  color: red;
+  font-weight: 500;
+}
+
+/* mobile resposiveness */
+
+@media (min-width: 300px) and (max-width: 991px) {
+  .navbar-nav-buttons {
+    position: absolute;
+    right: 25%;
+    font-size: 10px;
+  }
+  .navbar-brand {
+    position: absolute;
+    right: -70px;
+    /* margin-left: 100px; */
+  }
+  .btn-danger {
+    font-size: 12px;
+  }
+  /* here are stylings for the dropdown or popups in the nav links when in mobile version. */
+  .dropdown-menu-about {
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 50px;
+    height: 200px;
+    background-color: green;
+    color: white;
+  }
+  .dropdown-menu-elect {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    height: 200px;
+    background-color: green;
+    color: white;
+  }
+  .dropdown-menu-event {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    height: 200px;
+    background-color: green;
+    color: white;
+  }
+  .dropdown-menu-member {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    height: 200px;
+    background-color: green;
+    color: white;
+  } /*the styling for naviagion links end here*/
+  .form-control {
+    flex-direction: column;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+  }
+  .form-div-one,
+  .form-div-two {
+    width: 100% !important;
+    padding-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 746px) {
+  .tech-section {
+    display: block !important;
+  }
+}
+
+/* my my */
+
+.slider-cards-container {
+  position: relative;
+  bottom: 40px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+}
+
+.content {
+  z-index: 20;
+  max-width: 220px;
+  background-color: white;
+  border: 1px solid rgba(232, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(133, 133, 133, 1);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(133, 133, 133, 1);
+  box-shadow: 0px 6px 5px 0px rgba(133, 133, 133, 1);
+}
+
+.login-signup {
+  margin-top: 3%;
+  display: flex;
+  gap: 10px;
+}
+
+.login {
+  background-color: #029905;
+  border: 1px solid #029905;
+  border-radius: 10px;
+  padding: 10px 30px;
+  color: white;
+}
+
+.login:hover {
+  background-color: #e80000;
+  border: 1px solid #e80000;
+}
+
+.signup {
+  border: 1px solid #029905;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+/* mission & vision */
+.divider {
+  width: 40px;
+  height: 3px;
+  background-color: #e80000;
+}
+
+.mission-card-container {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-para {
+  font-size: 12px;
+}
+
+/* mission & Cards */
+.mission-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.campaign-card h6 {
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.campaign-card {
+  width: 250px;
+  font-size: 10px;
+}
+
+.campaign-card button {
+  background-color: #029905;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.campaign-card button:hover {
+  background-color: #e80000;
+}
+
+.event {
+  margin-left: -30%;
+}
+
+.tracking-wide {
+  letter-spacing: 2px;
+}
+
+/* Tech Opportunities section */
+
+.tracking-wide {
+  letter-spacing: 5px;
+}
+.tech-section {
+  width: 100%;
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+
+.div-2 {
+  padding: 20px 0px;
+  background-color: #e80000;
+  color: white;
+  padding-left: 50px;
+}
+.div-2 h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.hr {
+  width: 50%;
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 2px;
+}
+
+.div-2 button {
+  background-color: #029905;
+  border-radius: 5px;
+  padding: 8px 40px;
+  font-weight: 700;
+}
+
+.rectangle-card {
+  position: relative;
+  max-width: 350px;
+  padding: 10px 20px;
+  margin: 8px 30px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(133, 133, 133, 1);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(133, 133, 133, 1);
+  box-shadow: 0px 6px 5px 0px rgba(133, 133, 133, 1);
+}
+
+.services-container {
+  margin: 20px auto;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.more-services {
+  max-width: 70%;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.rectangle-card {
+  margin: 20px;
+}
+
+.rect-1 {
+  float: left;
+}
+
+.rect-2 {
+  float: right;
+}
+
+.rect-1 h1 {
+  position: absolute;
+  right: -40px;
+  top: -35px;
+  font-family: pacifico;
+  font-size: 110px;
+  -webkit-text-stroke: gray;
+  -webkit-text-stroke-width: 1px;
+  color: white;
+}
+
+.rect-2 h1 {
+  position: absolute;
+  left: -50px;
+  top: -35px;
+  font-family: pacifico;
+  font-size: 110px;
+  -webkit-text-stroke: gray;
+  -webkit-text-stroke-width: 1px;
+  color: white;
+}
+
+/* form design */
+
+.form-control {
+  width: 80%;
+  height: fit-content;
+  margin: 0px auto;
+  border: none;
+}
+
+.form-div-one {
+  width: 50%;
+  padding: 5px 20px 5px 0px;
+}
+
+.form-text {
+  padding: 8px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.form-text p {
+  font-size: 14px;
+}
+
+.form-text .note {
+  font-size: 11px;
+}
+
+.form-div-two {
+  width: 50%;
+  padding: 5px 0px 5px 20px;
+}
+
+.form-div-one input,
+.form-div-one a {
+  width: 100%;
+  margin: 5px 10px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.form-div-one a {
+  font-size: 12px;
+  padding-left: 0px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-div-two p {
+  font-size: 14px;
+}
